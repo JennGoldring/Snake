@@ -1,26 +1,30 @@
+import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
-import java.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.util.Random;
-import javax.swing.Jpanel;
+
 public class GamePanel extends JPanel implements ActionListener {
+
     static final int SCREEN_WIDTH = 600;
     static final int SCREEN_HEIGHT = 600;
     static final int UNIT_SIZE = 25;
     static final int GAME_UNITS = (SCREEN_WIDTH*SCREEN_HEIGHT)/UNIT_SIZE;
-    static final int DELAY = 75;
+    static final int DELAY = 75; //higher the number slower the game
     final int x[] = new int [GAME_UNITS];
     final int y[] = new int [GAME_UNITS];
     int bodyParts = 6;
     int appelsEaten;
     int appleX;
     int appleY;
-    char direction = 'R';
+    char direction = 'R'; //snake begins by going right
     boolean running = false;
     Timer timer;
-    Random random
+    Random random;
 
-    GamePanel(){
+    GamePanel() {
         random = new Random();
         this.setPreferredSize(new Dimension(SCREEN_WIDTH,SCREEN_HEIGHT));
         this.setBackground(Color.black);
@@ -30,9 +34,14 @@ public class GamePanel extends JPanel implements ActionListener {
 
     }
     public void startGame() {
-
+        newApple();
+        running = true;
+        timer = new Timer (DELAY,this);
+        timer.start();
     }
     public void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        draw(g);
 
     }
     public void draw(Graphics g) {
@@ -53,11 +62,12 @@ public class GamePanel extends JPanel implements ActionListener {
     public void gameOver(Graphics g){
 
     }
+    @Override
     public void actionPerformed(ActionEvent e) {
-
+        // TODO Auto-generate method stub
     }
     public class MyKeyAdapter extends KeyAdapter {
-
+        @Override
         public void keyPressed(KeyEvent e) {
 
         }
