@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d083929e-3783-4b16-bb1d-41c8e8df4dd1" name="Changes" comment="Initial steps for game">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GamePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/GamePanel$MyKeyAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GamePanel$MyKeyAdapter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/GamePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GamePanel.class" afterDir="false" />
